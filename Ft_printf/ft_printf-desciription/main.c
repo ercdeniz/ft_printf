@@ -13,7 +13,7 @@ int	main(void)
 	unsigned int	X = 15;
 	char			yüzde = '%';
 
-	printf("\nPRINTF: \n*******************\n");
+	printf("\n      PRINTF: \n*******************\n");
 	printf("char: %c \n", c);
 	printf("string: %s \n", s);
 	printf("pointer: %p \n", p);
@@ -22,9 +22,9 @@ int	main(void)
 	printf("unsigned: %u \n", u);
 	printf("hex: %x \n", x);
 	printf("HEX: %X \n", X);
-	printf("%% verince sadece biri yazılıyor\n");//printf("%%: \n", yüzde); bu kısımda printf de hata veriyor
-
-	ft_printf("\nFT_PRINTF: \n*******************\n");
+	printf("%% verince sadece biri yazılıyor\n");
+	
+	ft_printf("\n     FT_PRINTF: \n*******************\n");
 	ft_printf("char: %c \n", c);
 	ft_printf("string: %s \n", s);
 	ft_printf("pointer: %p \n", p);
