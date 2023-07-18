@@ -28,8 +28,9 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) a.out
 	clear
-	@echo "\n\033[1;3;31;40;91m $(NAME) removed 👋\033[0m\n"
+	@echo "\n\033[1;3;31;40;91m a.out & $(NAME) removed 👋\033[0m\n"
 
 re: fclean all
 
