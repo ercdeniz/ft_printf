@@ -30,34 +30,6 @@ int	ft_putptr(uintptr_t n, char *base)
 	return (count);
 }
 
-int	ft_putnbr_base(int nbr, char *base) // işaretli değer alabilir
-/* sayıyı verilen base'e göre yazdırır ve yazdırdığı karakter sayısını döndürür yazdıramazsa -1 döndürür*/
-{
-	size_t count;
-	size_t base_len;
-	int tmp;
-
-	count = 0;
-	if (nbr < 0)
-	{
-		nbr *= -1;
-		if (ft_putchar('-') == -1)
-			return (-1);
-		count++;
-	}
-	base_len = ft_strlen(base);
-	if (nbr >= (int)base_len)
-	{
-		tmp = ft_putnbr_base(nbr / base_len, base);
-		if (tmp == -1)
-			return (-1);
-		count += tmp;
-	}
-	if (ft_putchar(base[nbr % base_len]) == -1)
-		return (-1);
-	return (++count);
-}
-
 int	ft_unsnd_putnbr_base(unsigned int nbr, char *base)
 // sadece işaretsiz değer alabilir
 /* sayıyı verilen base'e göre yazdırır ve yazdırdığı karakter sayısını döndürür yazdıramazsa -1 döndürür*/
@@ -70,7 +42,7 @@ int	ft_unsnd_putnbr_base(unsigned int nbr, char *base)
 	base_len = ft_strlen(base);
 	if (nbr >= (unsigned int)base_len)
 	{
-		tmp = ft_putnbr_base(nbr / base_len, base);
+		tmp = ft_unsnd_putnbr_base(nbr / base_len, base);
 		if (tmp == -1)
 			return (-1);
 		count += tmp;
