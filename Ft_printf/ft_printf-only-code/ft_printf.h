@@ -34,7 +34,6 @@ int		ft_putchar(char c);
 int		ft_putstr(char *str);
 int		ft_putptr(uintptr_t n, char *base);
 int		ft_putnbr(int nb);
-int		ft_putnbr_base(int nbr, char *base);
 int		ft_unsnd_putnbr_base(unsigned int nbr, char *base);
 size_t	ft_strlen(const char *str);
 #endif
